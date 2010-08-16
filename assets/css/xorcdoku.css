@@ -1,0 +1,29 @@
+body, td, th, p, li{
+	font: 1em Helvetica, Arial, sans-serif;
+}
+body{
+	width:700px;
+}
+code, pre{
+	font-size:1em;
+}
+h1{
+	font-size: 1.8em;
+	margin:2em 0 1em;
+	text-shadow: none !important;
+}
+
+h2{
+	font-size:	1.6em;
+	margin:2em 0 1em;
+	text-shadow: none !important;
+}
+h3{
+	font-size:	1.4em;
+	margin:2em 0 1em;
+	text-shadow: none !important;
+}
+
+p{
+	margin:2em 0;
+}
