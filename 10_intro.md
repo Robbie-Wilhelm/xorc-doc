@@ -8,29 +8,29 @@
 - terminal öffnen
 - das grundgerüst für eine neue anwendung generieren. die datenbank und ein prefix (der allen tabellen dieser anwemdung automatisch vorangestellt wird) müssen angegeben werden.
  
-			/home/data/xorclib/xorc/bin/xorc --db=mysql://root:@localhost/betasystems --prefix=tc gen app 
+        $ xorc --db=mysql://root:@localhost/betasystems --prefix=tc gen app 
 		
 - xorc legt automatisch ordner in _/home/data/projekte/2009/betatagcloud/_ an: 
 
-			bin
-				betatagcloud
-			conf
-				betatagcloud_dev.ini
-				betatagcloud_dist.ini
-			lib
-				betatagcloud
-					betatagcloud.class.php
-			public
-				app.css
-				index.php
-				xorcform.css
-			src
-				routes.txt
-				view
-					_layout.bottom.html
-					_layout.page.html
-					_layout.top.html
-			var
+		bin
+			betatagcloud
+		conf
+			betatagcloud_dev.ini
+			betatagcloud_dist.ini
+		lib
+			betatagcloud
+				betatagcloud.class.php
+		public
+			app.css
+			index.php
+			xorcform.css
+		src
+			routes.txt
+			view
+				_layout.bottom.html
+				_layout.page.html
+				_layout.top.html
+		var
 		
 - das _public_ verzeichnis muß in die htdocs des webservers gelinkt werden 
 

@@ -1,8 +1,8 @@
 title: xorc Dokumentation
 author: Robert Wagner, André Eberwein, 20sec.net GmbH
-doc-levels: h2,h3,h4
-doc-assets: /dev/doctor/books/xorc/assets/
-doc-css: css/md-style.css
+doc-toc-levels: h2,h3,h4
+-doc-assets: /dev/doctor/books/xorc/assets/
+doc-css: assets/css/md-style.css
 
 <style>
 body{font-family: Arial, sans-serif;font-size:9pt;}

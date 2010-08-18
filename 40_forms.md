@@ -98,14 +98,14 @@ sieht so aus:
 
 beispielcode:    
                 
-            <?=image_submit_tag("save", "gfx/homers-butt.jpg", array('class'=>'ibutton'))?>
+            <?=image_submit_tag("save", "assets/gfx/homers-butt.jpg", array('class'=>'ibutton'))?>
 erzeugt:
 
             <input type="image" value="save" name="save" src="/gfx/homers-butt.jpg" class="ibutton">
             
 sieht so aus:
 
-<input type="image" value="save" name="save" src="gfx/homers-butt.jpg" class="ibutton">
+<input type="image" value="save" name="save" src="assets/gfx/homers-butt.jpg" class="ibutton">
 
 
 #### password_field_tag(_$name, $value, $opts=array()_)
