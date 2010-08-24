@@ -96,4 +96,29 @@ Beispiele:
 #### ddl
 
     void ddl($table, $ddl)
-    
+
+### ADO-DB Datentypen
+
+* C:  Varchar, capped to 255 characters.
+* X:  Larger varchar, capped to 4000 characters (to be compatible with Oracle). 
+* XL: For Oracle, returns CLOB, otherwise the largest varchar size.
+
+* C2: Multibyte varchar
+* X2: Multibyte varchar (largest size)
+
+* B:  BLOB (binary large object)
+
+* D:  Date (some databases do not support this, and we return a datetime type)
+* T:  Datetime or Timestamp accurate to the second.
+* TS: Datetime or Timestamp supporting Sub-second accuracy.
+Supported by Oracle, PostgreSQL and SQL Server currently. 
+Otherwise equivalent to T.
+
+* L:  Integer field suitable for storing booleans (0 or 1)
+* I:  Integer (mapped to I4)
+* I1: 1-byte integer
+* I2: 2-byte integer
+* I4: 4-byte integer
+* I8: 8-byte integer
+* F:  Floating point number
+* N:  Numeric or decimal number
