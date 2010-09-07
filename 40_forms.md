@@ -242,4 +242,55 @@ sieht so aus:
 
 <input type="text" name="simpsons[Maggie]" value="baby" size="40" id="tf5">
 
+#### button_tag(_$name, $value, $opts=array()_)
+
+beispielcode:
+
+erzeugt:
+
+sieht so aus:
+
+### Formulare für ein bestimmtes Model
+Um ein Formular für genau ein Model zu erzeugen, wird zuerst ein Form-Objekt benötigt.
+
+	<? $articleform = new Xorc_objectform($article, 'article', array("autoid"=>true)); ?>
+
+Danach wird mit start das Form geöffnet und mit end_form_tag wieder geschlossen. 
+
+	<?=$articleform->start(array("save", $article->id), array("class"=>"xf xf-double")?>
+		<?=label_tag('Titel', 'title')?>
+		<?=$articleform->text_field("title")?><br />	
+
+		<?=label_tag('Text', 'text')?>
+		<?=$articleform->text_area("text", array("size"=>"72x15"))?><br />
+	<?=end_form_tag()?>
+
+Zwischen diesen beiden Funktionsaufrufen werden nun die Felder für das Form eingebunden.
+
+
+### Formulare für mehrere Models
+Am Anfang eines Projekts reicht ein Formular pro Model eigentlich immer aus, d.h. alle Felder erhalten als Prefix den Namen genau eines Objekts / Models. Irgendwann möchte man aber auch verknüpfte Daten gleich mit speichern oder bearbeiten. Das Formular muss so erweitert werden, dass man auch Felder mit dem Prefix weiterer Objekte / Models übergeben kann.
+
+Um das zu erreichen, erzeugt man sich statt nur einem mehrere Form-Objekte.
+
+	<? $articleform = new Xorc_objectform($article, 'article', array("autoid"=>true)); ?>
+	<? $addressform = new Xorc_objectform($address, 'address', array("autoid"=>true)); ?>
+
+Es wird aber genau wie im Beispiel oben das Form nur einmal mit start geöffnet. Innerhalb des Forms kann jedoch nun über die beiden Form-Objekte $articleform und $addressform auf die Felder zugegriffen werden. Abhängig vom jeweiligen Form-Objekt wird dann auch der richtige Prefix zugeordnet.
+
+	<?=$articleform->start(array("save", $article->id), array("class"=>"xf xf-double")?>
+		<?=label_tag('Titel', 'title')?>
+		<?=$articleform->text_field("title")?><br />	
+
+		<?=label_tag('Text', 'text')?>
+		<?=$articleform->text_area("text", array("size"=>"72x15"))?><br />
+
+		<?=label_tag('Stadt', 'cityname')?>
+		<?=$addressform->text_field("cityname")?><br />
+
+		<?=label_tag('Postleitzahl', 'zipcode')?>
+		<?=$addressform->text_field("zipcode")?><br />
+	<?=end_form_tag()?>
+
+
 
