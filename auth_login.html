@@ -1,0 +1,43 @@
+
+
+<div id="login">
+
+<div id="welcome">
+
+   <h1>Willkommen zu Blogger</h1>
+   
+</div>
+
+<div id="form">
+<form action="<?=url("user/index")?>" method="post">
+
+    <div id="msg"><?=$msg?></div>
+
+   <fieldset>
+
+
+        <label for="xorcuser">E-Mail</label><br>
+        <input type="Text" id="xorcuser" name="username" size="15" maxlength="24" value="" ><br><br>
+
+        <label for="xorcpass">Passwort</label><br>
+        <input type="password" id="xorcpass" name="password" size="15" maxlength="16" value=""><br><br>
+
+   </fieldset>
+      
+   <fieldset>
+      <div class="xf">
+ 
+        <button type="Submit" name="post" value="Login" class="btn green">Anmelden</button><br><br>
+      </div>
+   </fieldset>
+
+   <fieldset>
+        <?=link_to("register/reminder", "Ich habe mein Passwort vergessen.")?>
+   </fieldset>
+</form>
+
+</div>
+
+</div>
+
+
